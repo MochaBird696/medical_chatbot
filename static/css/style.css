@@ -1,0 +1,109 @@
+body {
+  background: #f0f8ff;
+  font-family: sans-serif;
+}
+
+/* Container */
+.chat-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header bar */
+.chat-header {
+  background: #0077b6;
+  color: white;
+  padding: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Logo + title in header */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo h1 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+/* Add this */
+.logo-icon {
+  height: 32px;
+  width: auto;         /* preserves aspect ratio */
+  object-fit: contain; /* just in case */
+}
+
+
+/* Message area */
+.chat-window {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #fff;
+}
+
+/* Bubbles */
+.message {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.message.user {
+  justify-content: flex-end;
+}
+.message.bot {
+  justify-content: flex-start;
+}
+.bubble {
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  max-width: 60%;
+}
+.message.user .bubble {
+  background: #caf0f8;
+  text-align: right;
+}
+.message.bot .bubble {
+  background: #ade8f4;
+  text-align: left;
+}
+
+/* Input bar */
+.input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+#user-input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+}
+#send-btn {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.options button {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
