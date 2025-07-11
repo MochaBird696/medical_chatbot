@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MediChat</title>
+
+  <!-- Your main stylesheet -->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+  />
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="{{ url_for('static', filename='img/favicon.ico') }}"
+    type="image/x-icon"
+  />
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='img/favicon.ico') }}"
+    type="image/x-icon"
+  />
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <!-- Logo + title -->
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='img/medi_chat.png') }}"
+          alt="MediChat Logo"
+          class="logo-icon"
+        />
+        <h1>MediChat</h1>
+      </div>
+      <p>Your virtual symptom checker</p>
+    </header>
+
+    <div id="chat-window" class="chat-window"></div>
+
+    <div class="input-area">
+      <input
+        id="user-input"
+        type="text"
+        placeholder="Enter symptoms or select an option…"
+        autocomplete="off"
+      />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <!-- Your chat logic -->
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
